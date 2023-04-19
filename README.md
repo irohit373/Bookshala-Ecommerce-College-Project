@@ -23,11 +23,11 @@ Mini Project in Diploma Engineering having a Complete Experience of Online E-Com
 
 ## Tasks
 
-- [x]Iinital Start
-- [ ]Implementing Frameworks
-- [ ]Creating Logo
-- [ ]Selecting a color-theme
-- [ ]Selecting a Font style
-- [ ]
+-[x]Iinital Start
+-[ ]Implementing Frameworks
+-[ ]Creating Logo
+-[ ]Selecting a color-theme
+-[ ]Selecting a Font style
+-[ ]
 
 
