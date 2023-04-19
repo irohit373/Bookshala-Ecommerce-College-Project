@@ -3,31 +3,31 @@ Mini Project in Diploma Engineering having a Complete Experience of Online E-Com
 
 ---
 ## Frontend
--CSS
--Tailwind CSS
+- CSS
+- Tailwind CSS
 -
 
 ---
 ## Backend
--PHP
--JavaScript
--PHPMyAdmin 
-  Login username root pass : usbw
+- PHP
+- JavaScript
+- PHPMyAdmin 
+    Login username root pass : usbw
 
 ---
 ## Databse
--MySQL
+- MySQL
 -
 
 ---
 
 ## Tasks
 
--[x]Iinital Start
--[ ]Implementing Frameworks
--[ ]Creating Logo
--[ ]Selecting a color-theme
--[ ]Selecting a Font style
--[ ]
+- [x]Iinital Start
+- [ ]Implementing Frameworks
+- [ ]Creating Logo
+- [ ]Selecting a color-theme
+- [ ]Selecting a Font style
+- [ ]
 
 
