@@ -2,26 +2,27 @@
 Mini Project in Diploma Engineering having a Complete Experience of Online E-Commerce  
 
 ---
-##Frontend
+## Frontend
 -CSS
 -Tailwind CSS
 -
 
 ---
-##Backend
+## Backend
 -PHP
 -JavaScript
 -PHPMyAdmin 
   Login username root pass : usbw
 
 ---
-##Databse
+## Databse
 -MySQL
 -
 
 ---
 
-##Tasks
+## Tasks
+
 -[x]Iinital Start
 -[ ]Implementing Frameworks
 -[ ]Creating Logo
