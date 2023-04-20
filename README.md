@@ -35,5 +35,13 @@ Mini Project in Diploma Engineering having a Complete Experience of Online E-Com
  
  -[ ]
 
+##Color Palatte
+
+![image](https://user-images.githubusercontent.com/131258724/233333638-bc88e85c-08d3-4ca2-9111-94e4ce3d384a.png)
+
+- #0A4D68
+- #088395
+- #05BFDB
+- #00FFCA
 
 
