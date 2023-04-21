@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap'); */
+
+body{
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Poopins", sans-serif;
+}
+
+.navbar-nav {
+    text-align: right;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding-right: 1em;
+    color: #fff;
+    font-size: 1.1em;
+  }
+  
+  
