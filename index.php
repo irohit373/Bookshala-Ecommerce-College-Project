@@ -108,7 +108,7 @@
 
                     <script>
                         $(document).ready(function(){
-                            $("#myCarousel").carousel()-;
+                            $("#myCarousel").carousel();
                             
                         });
                     </script>
