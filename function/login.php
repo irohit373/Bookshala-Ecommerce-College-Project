@@ -1,6 +1,7 @@
 <?php
-    require('connection.php');
-    require('session.php');
+    require 'connection.php';
+    require 'session.php';
+
     if (isset($_POST['submit'])) {
  
     $email = trim($_POST['email']);
@@ -29,17 +30,17 @@ if ($upass == ''){
                 $_SESSION['LAST_NAME']  =  $found_user['lname']; 
            
              ?>    <script type="text/javascript">
-				    	window.location = "login.php";
+				    	window.location = "../login_page.php";
 
 					</script>
              <?php       echo("ther is a problem");
             } else {
               ?>    <script type="text/javascript">
                 alert("Wrong Username or Password.");
-                window.location = "admin.php";
+                window.location = "../login.php";
                 </script>
         <?php
- 
+
             }
  
          } else {
