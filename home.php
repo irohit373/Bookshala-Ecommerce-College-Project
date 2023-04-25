@@ -1,3 +1,5 @@
+<?php include 'function/session.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,16 +50,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
                 </li>
+                <?php if (logged_in()) { ?>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['FIRST_NAME'];?></a>
                     <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Cart</a>
                     <a class="dropdown-item" href="#">Orders</a>
                     <a class="dropdown-item" href="#">Sell</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="function/logout.php">Logout</a>
                     </div>
                 </li>            
+                <?php }else { ?>
+                    <li class="nav-item">
+                    <a class="nav-link" href="login_page.php">Sign In</a>
+                </li>
+                    <?php } ?>
             </ul>
         </div>
     </div>

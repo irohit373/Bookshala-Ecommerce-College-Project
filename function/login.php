@@ -12,7 +12,7 @@
 if ($upass == ''){
      ?>    <script type="text/javascript">
                 alert("Password is missing!");
-                window.location = "login.php";
+                window.location = "../login_page.php";
                 </script>
         <?php
 }else{
@@ -37,7 +37,7 @@ if ($upass == ''){
             } else {
               ?>    <script type="text/javascript">
                 alert("Wrong Username or Password.");
-                window.location = "../login.php";
+                window.location = "../login_page.php";
                 </script>
         <?php
 
