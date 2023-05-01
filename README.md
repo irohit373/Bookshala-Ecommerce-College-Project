@@ -33,7 +33,13 @@ Mini Project in Diploma Engineering having a Complete Experience of Online E-Com
  
  -[ ]Selecting a Font style
  
- -[ ]
+ -[ ]add phone number, address and photo in registration page
+
+ -[ ]only image insertion and multiple image insertion with creation of the folder and displaying them using loop using folder name only
+
+ -[ ]add setting page where u can edit the user details
+
+ -[ ] 
 
 ##Color Palatte
 

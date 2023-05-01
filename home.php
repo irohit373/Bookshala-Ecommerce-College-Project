@@ -56,7 +56,7 @@
                     <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Cart</a>
                     <a class="dropdown-item" href="#">Orders</a>
-                    <a class="dropdown-item" href="#">Sell</a>
+                    <a class="dropdown-item" href="include/seller.php">Sell</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="function/logout.php">Logout</a>
                     </div>
