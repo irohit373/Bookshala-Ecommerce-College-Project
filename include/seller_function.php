@@ -2,15 +2,13 @@
     //  include "../function/connection.php";
     //  include "../function/session.php";
 
-    $targetDir = "/home/rohit/Desktop/";
-    $$target_file = $targetDir . basename($_FILES["image_thumbnail"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     //  && !empty($_FILES["image_thumbnail"]["name"])
-
     
-     if (isset($_POST['submit'])) {
-
+    
+    if (isset($_POST['submit'])) {
+        
+        $targetDir = "";
+        $$target_file = $targetDir . basename($_FILES["image_thumbnail"]["name"]);
  
         // File upload path
         // $statusMsg = "";
@@ -23,20 +21,20 @@
         // $book_tags = $_POST['book_tags'];
 
         $check = getimagesize($_FILES["image_thumbnail"]["tmp_name"]);
-        if($check !== false){
-            if (move_uploaded_file($_FILES["image_thumbnail"]["tmp_name"], $target_file)) {
-                echo "check4";
+        if($check != false){
+            if (move_uploaded_file($_FILES["image_thumbnail"]["tmp_name"], "data/".$_FILES["image_thumbnail"]["name"])) {
 
                 echo "The file " . htmlspecialchars( basename($_FILES["image_thumbnail"]["name"])) . " has been uploaded";
             }else{
                 echo "sorry, your file is not uploaded";
             }
         }else{
+
             echo "File is not an image";
         }
+    }else{
+        echo "POST Error: ";
     }
-    echo "check5";
-
     // Display status message
     // echo $statusMsg;    
 ?>
