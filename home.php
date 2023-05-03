@@ -1,4 +1,8 @@
-<?php include 'function/session.php'; ?>
+<?php 
+
+    include 'function/connection.php';
+    include 'function/session.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,13 +46,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
+                    <a class="nav-link" href="store.php">Store</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <?php if (logged_in()) { ?>
                 <li class="nav-item dropdown">
@@ -103,13 +107,43 @@
                 </a>
             </div>
 
-<h1>hello world</h1>
+<center><h1 class="Display-1">Store</h1></center>
 
+<div class="container">
+<divc class="row">
+<?php
+        $query = "SELECT * FROM items";
+        $data = mysqli_query($conn, $query);
+
+        $total = mysqli_num_rows($data);
+
+        if ($total != 0){
+            while($tb_data = mysqli_fetch_assoc($data)){
+                echo '
+                <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                <img src="data/book_img/'.$tb_data['image_thumbnail'].'" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">'.$tb_data['title'].'</h5>
+                  <p class="card-text">'.$tb_data['description'].'</p>
+                  <a href="function/buynow.php" class="btn btn-success">Buy Now</a>
+                  <a href="include/addtocart.php" class="btn btn-warning">Add to Cart</a>
+                </div>
+              </div>
+              </div>
+              ';
+            }
+            }else{
+                
+            }
+        ?> 
+        </div>
+</div>  
                     
-                    <!-- Bootstrap -->
-                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>                    
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>                    
 
                     <!-- Offline Bootstrap CSS -->
                     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

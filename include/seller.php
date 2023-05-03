@@ -14,7 +14,7 @@
 <body>
    <center> 
       <!-- Do not touch this -->
-      <form action="../function/seller_function.php" method="POST" enctype="multipart/form-data">
+      <form action="../function/selling.php" method="POST" enctype="multipart/form-data">
       <!-- this -->
         <br>
         <h1>Fill to Sell</h1>
