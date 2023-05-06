@@ -8,23 +8,23 @@
         $book_author = $_POST['book_author'];
         $seller_id = $_SESSION['MEMBER_ID'];
         $book_price = $_POST['book_price'];
-        $image_dest = $_FILES["image_thumbnail"]["name"];
+        // $image_dest = $_FILES["image_thumbnail"]["name"];
         $book_description = $_POST['book_description'];
         $book_tags = $_POST['book_tags'];
+        $ext = pathinfo($_FILES['image_thumbnail']['name'], PATHINFO_EXTENSION);
+        $imagename = $book_title . $ext;
 
-        $sql = "INSERT INTO items (title, author, seller_id, price, stock_insertion_date, image_thumbnail, description, tags) VALUES ('$book_title', '$book_author', '$seller_id', '$book_price', NOW(), '$image_dest', '$book_description', '$book_tags')";
-        
+        $sql = "INSERT INTO items (title, author, seller_id, price, stock_insertion_date, image_thumbnail, description, tags) VALUES ('$book_title', '$book_author', '$seller_id', '$book_price', NOW(), '$imagename', '$book_description', '$book_tags')";
+
         $check = getimagesize($_FILES["image_thumbnail"]["tmp_name"]);
         
         if($check != false){
 
-            if (move_uploaded_file($_FILES["image_thumbnail"]["tmp_name"], "../data/book_img/".$_FILES["image_thumbnail"]["name"])) {
+            if (move_uploaded_file($_FILES["image_thumbnail"]["tmp_name"], "../data/book_img/".$imagename)) {
                 
                 if (mysqli_query($conn, $sql)) {
-
-                        echo "The file " . htmlspecialchars( basename($_FILES["image_thumbnail"]["name"])) . " has been uploaded";
                         echo "<script>
-                            alert(Book is Added to Stock');
+                            alert('Book is Added to Stock');
                             window.location.href='../home.php';                                
                         </script>";
                 }else{

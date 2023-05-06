@@ -1,6 +1,6 @@
 <?php
-    include "connection.php";
-    include "session.php";
+    // require "connection.php";
+    require "../function/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell it</title>
 </head>
+<?php
+    if (!logged_in()) {
+?>
+   <script type="text/javascript">
+            window.location = "../login_page.php";
+    </script>
+    <?php
+}
+?>
 <body>
    <center> 
       <!-- Do not touch this -->
